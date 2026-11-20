@@ -1,4 +1,4 @@
-# [Your site's title]
+# College-Town Home Sales
 
 ## Start here (delete this section before you submit)
 
@@ -28,19 +28,19 @@ Don't edit any of the five dataset files. Your site needs only the CSV file. The
 
 ## What this site is for
 
-_Replace this line with your site's question and audience, or a short description of the site._
+This website compares median home sale prices across 18 college towns in the College-town home sales dataset. It helps visitors quickly see which cities have the highest median sale prices and how many qualifying sales support each result.
 
 ## Live site
 
-https://your-username.github.io/your-repo-name/
+https://abhiram510.github.io/college-town-home-sales/
 
 ## Data notes
 
-_Replace this line. Say which rows you left out and why, and how each figure on the site is defined. "Five things that will bite you" in the description sheet lists the problems to cover._
+The page reads `data/college_town_home_sales.csv` directly in the browser. It excludes every sale with `sale_price` below $10,000, then calculates a median and qualifying-sale count for each city and state. Cities are sorted by median sale price from highest to lowest. The median is the middle value after qualifying prices are sorted.
 
 ## Tools we used
 
-_Replace this line with your AI coding agent or agents, and any libraries and other tools you used._
+Plain HTML, CSS, and JavaScript. No framework or build step is used.
 
 ## Citation
 

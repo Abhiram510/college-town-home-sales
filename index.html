@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<!-- A placeholder from the Home Sales template. Replace this file with your site's first page. -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Under construction</title>
-  <!-- An empty icon, so the browser doesn't log an error looking for favicon.ico -->
+  <meta name="description" content="Compare median home sale prices across 18 college towns.">
+  <title>College-Town Home Sales</title>
   <link rel="icon" href="data:,">
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      max-width: 40rem;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-      font-family: system-ui, sans-serif;
-      line-height: 1.5;
-    }
-    footer { margin-top: 3rem; font-size: 0.875rem; opacity: 0.75; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="hero">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="College-Town Home Sales home">
+        <span class="brand-mark" aria-hidden="true">CT</span>
+        <span>Home Sales</span>
+      </a>
+      <span class="nav-label">BDI 475 · 2026</span>
+    </nav>
+
+    <div class="hero-content shell">
+      <p class="eyebrow">A college-town housing comparison</p>
+      <h1>Where do homes sell for the most?</h1>
+      <p class="hero-deck">Median sale prices across 18 cities near 11 university campuses.</p>
+    </div>
+  </header>
+
   <main>
-    <h1>This site is under construction</h1>
-    <p>It will show findings from the College-town home sales dataset.</p>
+    <section class="summary shell" aria-labelledby="summary-heading">
+      <div class="summary-heading">
+        <div>
+          <p class="section-kicker">The rankings</p>
+          <h2 id="summary-heading">Median home sale prices</h2>
+        </div>
+        <p class="method-note">Sales below <strong>$10,000</strong> are excluded.</p>
+      </div>
+
+      <div id="status" class="status" role="status">Loading home sales...</div>
+
+      <div id="rankings" class="rankings" hidden>
+        <div class="rankings-header" aria-hidden="true">
+          <span>City</span>
+          <span>Median sale price</span>
+          <span>Qualifying sales</span>
+        </div>
+        <ol id="ranking-list" class="ranking-list"></ol>
+      </div>
+    </section>
+
+    <section class="method shell" aria-labelledby="method-heading">
+      <div>
+        <p class="section-kicker">About the data</p>
+        <h2 id="method-heading">How to read these results</h2>
+      </div>
+      <div class="method-copy">
+        <p>Each result is the middle sale price for one city after removing sales priced below $10,000. The median is less affected by unusually high or low prices than an average.</p>
+        <p>The sale count includes every qualifying completed sale for that city in the dataset.</p>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>Data: College-town home sales dataset, version 1.0 (2026). University of Illinois-Deloitte Foundation Center for Business Emerging Technologies. Data collected March 2026.</p>
+    <div class="shell footer-inner">
+      <p>Source: College-town home sales dataset, version 1.0 (2026).</p>
+      <p>University of Illinois-Deloitte Foundation Center for Business Emerging Technologies.</p>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
