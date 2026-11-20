@@ -1,0 +1,356 @@
+:root {
+  --ink: #13231d;
+  --forest: #153f33;
+  --forest-light: #1f5a48;
+  --sage: #dce9df;
+  --cream: #f5f3ec;
+  --paper: #fffefa;
+  --gold: #f2b84b;
+  --muted: #66736d;
+  --line: #dfe5df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.hero {
+  min-height: 390px;
+  color: #fff;
+  background:
+    linear-gradient(120deg, rgba(12, 48, 38, 0.98), rgba(31, 90, 72, 0.91)),
+    repeating-linear-gradient(135deg, transparent 0 38px, rgba(255,255,255,.04) 38px 39px);
+}
+
+.nav {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 760;
+  letter-spacing: -0.01em;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+.nav-label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  padding: 76px 0 64px;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.hero-deck {
+  margin: 24px 0 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(17px, 2vw, 21px);
+}
+
+.summary {
+  margin-top: -28px;
+  margin-bottom: 72px;
+  padding: 38px 42px 20px;
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(28, 66, 52, 0.10);
+  position: relative;
+}
+
+.summary-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+}
+
+.summary-heading .section-kicker,
+.method .section-kicker {
+  color: var(--forest-light);
+}
+
+h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.method-note {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.method-note strong {
+  color: var(--ink);
+}
+
+.status {
+  padding: 54px 20px;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.status.error {
+  color: #9b3c32;
+}
+
+.rankings-header,
+.ranking-row {
+  display: grid;
+  grid-template-columns: 56px minmax(200px, 1fr) 220px 150px;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.rankings-header {
+  min-height: 42px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rankings-header span:nth-child(3),
+.rankings-header span:nth-child(4) {
+  text-align: right;
+}
+
+.ranking-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ranking-row {
+  min-height: 82px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ranking-row:last-child {
+  border-bottom: 0;
+}
+
+.rank-number {
+  color: #94a099;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.city-name {
+  font-weight: 760;
+  letter-spacing: -0.01em;
+}
+
+.city-state {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.median-price {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.sale-count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.method {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  margin-bottom: 72px;
+  padding: 18px 0 42px;
+  border-top: 1px solid #ccd7cf;
+}
+
+.method-copy {
+  color: #4e5d56;
+  font-size: 15px;
+}
+
+.method-copy p {
+  margin: 0 0 12px;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.72);
+  background: var(--ink);
+  font-size: 13px;
+}
+
+.footer-inner {
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-inner p {
+  max-width: 430px;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .nav {
+    height: 68px;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 64px 0 52px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 14vw, 64px);
+  }
+
+  .summary {
+    margin-top: -20px;
+    padding: 28px 18px 10px;
+  }
+
+  .summary-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rankings-header {
+    display: none;
+  }
+
+  .ranking-row {
+    grid-template-columns: 38px 1fr auto;
+    grid-template-areas:
+      "rank city price"
+      "rank city count";
+    min-height: 88px;
+    column-gap: 8px;
+  }
+
+  .rank-number {
+    grid-area: rank;
+  }
+
+  .city-name {
+    grid-area: city;
+  }
+
+  .median-price {
+    grid-area: price;
+    align-self: end;
+    font-size: 20px;
+  }
+
+  .sale-count {
+    grid-area: count;
+    align-self: start;
+    font-size: 12px;
+  }
+
+  .sale-count::before {
+    content: "sales · ";
+  }
+
+  .method {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 44px;
+  }
+
+  .footer-inner {
+    min-height: 150px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
